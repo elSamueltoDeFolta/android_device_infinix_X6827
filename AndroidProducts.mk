@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_x6827.mk
+    $(LOCAL_DIR)/pbVictoria_x6827.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_x6827-eng \
-    twrp_x6827-userdebug \
-    twrp_x6827-user
+    pbVictoria_x6827-eng \
+    pbVictoria_x6827-userdebug \
+    pbVictoria_x6827-user
