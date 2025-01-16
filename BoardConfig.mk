@@ -104,11 +104,11 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Crypto
-TW_INCLUDE_CRYPTO := false
-TW_INCLUDE_CRYPTO_FBE := false
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO_FBE := true
 BOARD_USES_METADATA_PARTITION := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := false
-TW_USE_FSCRYPT_POLICY := 2
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_USE_FSCRYPT_POLICY := 1
 
 # Metadata root folder
 BOARD_ROOT_EXTRA_FOLDERS += metadata
@@ -158,8 +158,15 @@ TW_INCLUDE_FASTBOOTD := false
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_NO_HAPTICS := true
 
+# PBRP-Flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_PATCH_AVB2 := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
+# Torch
+PB_TORCH_PATH := "/sys/devices/virtual/torch/torch/torch_level"
+
 # Recovery framerate
-TW_FRAMERATE := 60
+TW_FRAMERATE := 120
 
 # Hide notch for orangefox
 ifneq ($(OF_HIDE_NOTCH),1)
